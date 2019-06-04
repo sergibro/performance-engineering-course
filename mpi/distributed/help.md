@@ -53,13 +53,13 @@
 `ssh-copy-id -i ./mpi.pub slave1`
 
 ## Create SSH agent process
-`eval \`ssh-agent\``
+``eval `ssh-agent` ``
 
 ## Add identity (private key) to agent process
 `ssh-add ./mpi`
 
 ## run multi hosts MPI
-mpirun -np 2 -hosts master,slave1 /home/mpiuser/cloud/basic_messages
+`mpirun -np 2 -hosts master,slave1 /home/mpiuser/cloud/basic_messages`
 
 ## Go inside docker container
-docker exec -it slave1 /bin/bash
+`docker exec -it slave1 /bin/bash`
